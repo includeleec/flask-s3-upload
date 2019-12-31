@@ -4,7 +4,3 @@
 
 # Ignore environment file
 .env
-
-# Ignore Docker config
-/docker-compose.yml
-/Dockerfile
