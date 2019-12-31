@@ -1,5 +1,5 @@
 # Flask S3 Restplus Upload
-Base on boto3, flask-restplus upload API.
+Base on boto3, flask-restplus aws s3 upload API.
 
 ## Usage
 ### 1. copy .env.sample to .env, set your config.
