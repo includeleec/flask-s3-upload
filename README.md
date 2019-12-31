@@ -12,7 +12,6 @@ set your config in `.env`.
 ### 2. install python lib dependency
 ```
 pip install -r requirements.txt
-
 ```
 
 ### 3. run on local machine
@@ -27,7 +26,7 @@ run
 flask run
 ```
 
-### Deploy
+## Deploy
 1. build docker image
 ```
 docker build -t flask-s3-uplaod .
@@ -37,3 +36,6 @@ docker build -t flask-s3-uplaod .
 ```
 docker run --env-file ./.env -p 5000:80 flask-s3-upload
 ```
+
+## Others
+[aws s3 相关配置说明](https://www.yuque.com/leec/tech-note/yf7lzz)
