@@ -1,7 +1,7 @@
 import random, string
 from flask import Flask, request, Response
 from filters import file_type
-from resources import get_bucket, get_buckets_list
+from resources import get_bucket, get_buckets_list, get_s3_config
 from flask_restplus import Resource, Api, Namespace, fields
 from werkzeug.utils import secure_filename
 from werkzeug.datastructures import FileStorage
@@ -66,6 +66,11 @@ class Upload(Resource):
                 'message': 'upload file success',
                 'data': file_key
             }
+
+@ns.route('/config')
+class Config(Resource):
+    def get(self):
+        return get_s3_config()
 
 if __name__ == "__main__":
     app.run()

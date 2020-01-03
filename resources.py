@@ -1,5 +1,5 @@
 import boto3
-from config import S3_BUCKET, S3_KEY, S3_SECRET
+from config import S3_BUCKET, S3_KEY, S3_SECRET, S3_URL_PREFIX
 from flask import session
 
 def _get_s3_resource():
@@ -26,3 +26,9 @@ def get_bucket():
 def get_buckets_list():
     client = boto3.client('s3')
     return client.list_buckets().get('Buckets')
+
+def get_s3_config():
+    return {
+        'bucket': S3_BUCKET,
+        'url_prefix': S3_URL_PREFIX
+    }
